@@ -16,7 +16,7 @@ es_host = "http://localhost:9200"
 def hello_world():
     return 'hello world!'
 
-@app.route('/SingUp', method=['GET', 'POST'])
+@app.route('/SingUp', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
         return render_template("SingUp.html")
