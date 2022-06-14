@@ -1,0 +1,51 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_container {
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.logo {
+    margin-top: 0px;
+    margin-bottom: 2.5rem;
+}
+
+.error {
+    height: 1rem;
+    font-size: 0.1rem;
+    color: red;
+    font-weight: 700;
+}
+
+#singUp {
+    width: 100%;
+    background-color: skyblue;
+    border-color: transparent;
+    color: white;
+}
+
+.account {
+    width: 10rem;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+#alert {
+    border-color: transparent;
+}

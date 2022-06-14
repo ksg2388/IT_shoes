@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="SingUp.css">
+</head>
+<body>
+    <div class = "main">
+        <div class = "main_container">
+            <h1 class="logo">IT Shoes</h1>
+            <div class="container">
+                <div class="id">
+                    <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account">
+                    <div id="idError" class="error"></div>
+                </div>
+                <div class="name">
+                    <input type="text" placeholder="닉네임을 입력해주세요" id="name" class="account">
+                    <div id="nameError" class="error"></div>
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account">
+                    <div id="passwordError" class="error"></div>
+                </div>
+                <div class="passwordConfirm">
+                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="passwordConfirm" class="account">
+                    <div id="passwordConfirmError" class="error"></div>
+                </div>
+                <button id="singUp" class="account" onclick="checkSingUp()">Sing Up</button>
+                <p id="alert" class="account"> </p>
+            </div>
+        </div>
+    </div>
+    <script src="SingUp.js"></script>
+</body>
+</html>
