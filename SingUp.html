@@ -12,24 +12,25 @@
         <div class = "main_container">
             <h1 class="logo">IT Shoes</h1>
             <div class="container">
-                <div class="id">
-                    <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account">
-                    <div id="idError" class="error"></div>
-                </div>
-                <div class="name">
-                    <input type="text" placeholder="닉네임을 입력해주세요" id="name" class="account">
-                    <div id="nameError" class="error"></div>
-                </div>
-                <div class="password">
-                    <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account">
-                    <div id="passwordError" class="error"></div>
-                </div>
-                <div class="passwordConfirm">
-                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="passwordConfirm" class="account">
-                    <div id="passwordConfirmError" class="error"></div>
-                </div>
-                <button id="singUp" class="account" onclick="checkSingUp()">Sing Up</button>
-                <p id="alert" class="account"> </p>
+                <form method="POST">
+                    <div class="id">
+                        <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account" name="id">
+                        <div id="idError" class="error"></div>
+                    </div>
+                    <div class="name">
+                        <input type="text" placeholder="닉네임을 입력해주세요" id="name" class="account" name="name">
+                        <div id="nameError" class="error"></div>
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account" name="password">
+                        <div id="passwordError" class="error"></div>
+                    </div>
+                    <div class="passwordConfirm">
+                        <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="passwordConfirm" class="account" name="passwordConfirm">
+                        <div id="passwordConfirmError" class="error"></div>
+                    </div>
+                    <button id="singUp" type="submit" class="account" onclick="checkSingUp()">Sing Up</button>
+                </form>
             </div>
         </div>
     </div>
