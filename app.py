@@ -8,6 +8,7 @@ import requests
 import json
 from flask import Flask, render_template, request, redirect, flash
 from elasticsearch import Elasticsearch
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 app.secret_key = "My_Key"
@@ -16,7 +17,8 @@ headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 @app.route('/')
 
-def find_url():
+
+def home():
     url="https://www.nike.com/kr/launch/?type=upcoming"
     res = requests.get(url,headers=headers)
     res.raise_for_status() #사이트에 접근 에러 발생 시 처리
@@ -30,12 +32,10 @@ def find_url():
         if result[1] == 0:
             url_list.append("https://www.nike.com"+shoe["href"]) #정보가 2개씩 나와서 1개만 나오도록 함
     
-    return url_list
-
-    #[ [상품명,색상,가격,발매날짜,상품이미지],[],..[]]
-def nike_shoes(nike_urls):
+    nikeUrl_list=url_list
+    
     shoes_info=[]
-    for nike_url in nike_urls:  #url 중 하나
+    for nike_url in nikeUrl_list:  #url 중 하나
         respond = requests.get(nike_url,headers=headers)
         respond.raise_for_status()
 
@@ -53,14 +53,9 @@ def nike_shoes(nike_urls):
             shoe_info.append(image["src"])
 
             shoes_info.append(shoe_info)
-
-    return shoes_info 
-
-def home():
-    nikeUrl_list=find_url()
-    nike_shoes(nikeUrl_list)
-    #print(nike_shoes(nikeUrl_list))
+    print(nike_shoes(nikeUrl_list))
     return render_template("home.html")
+
 
 @app.route('/SingUp', methods=['GET', 'POST'])
 def register():
