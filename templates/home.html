@@ -6,9 +6,24 @@
         <!-- 디바이스 크기 맞춤, 기본 꽉찬 화면으로 설정, 확대불가-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">
-		
 	</head>
 	<body>
+		<center>
+			<nav id="topMenu" >
+				<ul>
+					<li><a class="menuLink" href="">NIKE</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">NEW BALANCE</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">ADIDAS</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">STUSSY</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">sdfs</a></li>
+					<li>|</li>
+				</ul>
+			</nav>
+		</center>
 		<!-- Wrapper -->
 			<div id="wrapper">
 					<header id="header">
@@ -37,36 +52,14 @@
 						<div class="inner">
 							<header>
 									<center>
-										
 										<h1>세상의 모든 신발 이슈,&nbsp; 여기 다 &nbsp; It Shoes !</h1>
-										<div class="search">
-											<input type="text" placeholder="검색어 입력">
-											<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-										</div>
-										<br><br>
 										<h4>오늘의 발매 소식</h4>
 										<p>신규 등록 발매 정보</p>
 										<ul>
-											{% for x in shoes_info %}
-												<li>{{ x }}</li>
+											{% for i in range(len(shoes_info)) %}
+												<li><img src={{ shoes_info[i][4] }} />{{ shoes_info[i][4] }} {{ shoes_info[i][0] }} {{ shoes_info[i][1] }} {{ shoes_info[i][2] }} {{ shoes_info[i][3] }} </li>
 											{% endfor %}
 										</ul>
-										<center>
-											<nav id="topMenu" >
-												<ul>
-													<li><a class="menuLink" href="">NIKE</a></li>
-													<li>|</li>
-													<li><a class="menuLink" href="">NEW BALANCE</a></li>
-													<li>|</li>
-													<li><a class="menuLink" href="">ADIDAS</a></li>
-													<li>|</li>
-													<li><a class="menuLink" href="">STUSSY</a></li>
-													<li>|</li>
-													<li><a class="menuLink" href="">FOG</a></li>
-													<li>|</li>
-												</ul>
-											</nav>
-										</center>
 									</center>
 							</header>
 						</div>
