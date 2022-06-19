@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="SingUp.css">
+    <link href="{{ url_for('static', filename='SingUp.css') }}" rel="styleSheet">
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+    	{% if messages %}
+		<script>
+			alert("{{messages[-1]}}")
+		</script>
+	{% endif %}
+{% endwith %}
     <div class = "main">
         <div class = "main_container">
             <h1 class="logo">IT Shoes</h1>
@@ -15,25 +22,25 @@
                 <form method="POST">
                     <div class="id">
                         <input type="text" placeholder="아이디를 입력해주세요" id="id" class="account" name="id">
-                        <div id="idError" class="error"></div>
+                        <div id="idError" class="error">{{ id_error }}</div>
                     </div>
                     <div class="name">
                         <input type="text" placeholder="닉네임을 입력해주세요" id="name" class="account" name="name">
-                        <div id="nameError" class="error"></div>
+                        <div id="nameError" class="error">{{ name_error }}</div>
                     </div>
                     <div class="password">
                         <input type="password" placeholder="비밀번호를 입력해주세요" id="password" class="account" name="password">
-                        <div id="passwordError" class="error"></div>
+                        <div id="passwordError" class="error">{{ password_error }}</div>
                     </div>
                     <div class="passwordConfirm">
                         <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="passwordConfirm" class="account" name="passwordConfirm">
-                        <div id="passwordConfirmError" class="error"></div>
+                        <div id="passwordConfirmError" class="error">{{ passwordConfirm_error }}</div>
                     </div>
                     <button id="singUp" type="submit" class="account" onclick="checkSingUp()">Sing Up</button>
                 </form>
             </div>
         </div>
     </div>
-    <script src="SingUp.js"></script>
+    <script src="{{ url_for('static', filename='SingUp.js') }}"></script>
 </body>
 </html>
