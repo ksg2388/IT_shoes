@@ -5,16 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="{{ url_for('static', filename='SingUp.css') }}" rel="styleSheet">
+    <link rel="stylesheet" href="SingUp.css">
 </head>
 <body>
-{% with messages = get_flashed_messages() %}
-    	{% if messages %}
-		<script>
-			alert("{{messages[-1]}}")
-		</script>
-	{% endif %}
-{% endwith %}
     <div class = "main">
         <div class = "main_container">
             <h1 class="logo">IT Shoes</h1>
@@ -41,6 +34,6 @@
             </div>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='SingUp.js') }}"></script>
+    <script src="SingUp.js"></script>
 </body>
 </html>
