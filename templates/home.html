@@ -56,8 +56,8 @@
 										<h4>오늘의 발매 소식</h4>
 										<p>신규 등록 발매 정보</p>
 										<ul>
-											{% for i in range(len(shoes_info)) %}
-												<li><img src={{ shoes_info[i][4] }} />{{ shoes_info[i][4] }} {{ shoes_info[i][0] }} {{ shoes_info[i][1] }} {{ shoes_info[i][2] }} {{ shoes_info[i][3] }} </li>
+											{% for x in shoes_info %}
+												<li><img src={{ x[4] }} /> {{ x[0] }} {{ x[1] }} {{ x[2] }} {{ x[3] }}</li>
 											{% endfor %}
 										</ul>
 									</center>
