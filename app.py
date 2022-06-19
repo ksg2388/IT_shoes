@@ -15,7 +15,7 @@ es_host = "http://localhost:9200"
 
 @app.route('/')
 def hello_world():
-    return 'hello world!'
+    return render_template("home.html")
 
 @app.route('/SingUp', methods=['GET', 'POST'])
 def register():
@@ -77,8 +77,9 @@ def login():
         print(id)
         print(password)
         return redirect('/')
-
+    return redirect('/')
 
 if __name__ == '__main__':
 
     app.run(host="127.0.0.1", port=5000, debug=True)
+
