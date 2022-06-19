@@ -46,6 +46,11 @@
 										<br><br>
 										<h4>오늘의 발매 소식</h4>
 										<p>신규 등록 발매 정보</p>
+										<ul>
+											{% for x in shoes_info %}
+												<li>{{ x }}</li>
+											{% endfor %}
+										</ul>
 										<center>
 											<nav id="topMenu" >
 												<ul>
