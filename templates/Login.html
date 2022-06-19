@@ -12,12 +12,14 @@
     <div class = "main">
         <div class = "main_container">
             <h1 class="logo">IT Shoes</h1>
-            <div class="container">
-                <input type="text" placeholder="ID" id="id" class="account">
-                <input type="password" placeholder="Password" id="password" class="account">
-                <button id="login" class="account">Login</button>
-                <p id="alert" class="account"> </p>
-            </div>
+            <form method="POST">
+                <div class="container">
+                    <input type="text" placeholder="ID" id="id" class="account">
+                    <input type="password" placeholder="Password" id="password" class="account">
+                    <button id="login" class="account">Login</button>
+                    <p id="alert" class="account"> </p>
+                </div>
+            </form>
         </div>
     </div>
     <script src="{{ url_for('static', filename='Login.js') }}"></script>
