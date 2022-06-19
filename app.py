@@ -53,8 +53,9 @@ def home():
             shoe_info.append(image["src"])
 
             shoes_info.append(shoe_info)
-    print(nike_shoes(nikeUrl_list))
-    return render_template("home.html")
+    print(shoes_info)
+#    print(nike_shoes(nikeUrl_list))
+    return render_template("home.html", shoes_info=shoes_info)
 
 
 @app.route('/SingUp', methods=['GET', 'POST'])
@@ -122,4 +123,5 @@ def login():
 if __name__ == '__main__':
 
     app.run(host="127.0.0.1", port=5000, debug=True)
+
 
