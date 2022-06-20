@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
         <!-- 디바이스 크기 맞춤, 기본 꽉찬 화면으로 설정, 확대불가-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">
+		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">	
 	</head>
 	<body>
 		<center>
@@ -57,7 +57,7 @@
 										<p>신규 등록 발매 정보</p>
 										<ul>
 											{% for x in shoes_info %}
-												<li><img src={{ x[4] }} /> {{ x[0] }} {{ x[1] }} {{ x[2] }} {{ x[3] }}</li>
+												<li> <img src='{{x[4]}}' style="width: 7em; height: 7em; object-fit:fill;/> {{x[0]}} {{x[1]}} {{x[2]}} {{x[3]}} </li>
 											{% endfor %}
 										</ul>
 									</center>
