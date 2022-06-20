@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
         <!-- 디바이스 크기 맞춤, 기본 꽉찬 화면으로 설정, 확대불가-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">	
 	</head>
 	<body>
@@ -24,7 +26,8 @@
 										<li>
 											<a href={{ url_for('login') }}>
                                                 <span>LOGIN / JOIN</span>
-                                            </a></li>
+                                            </a>
+										</li>
 									</ul>
 								</nav>
 						</div>
@@ -61,13 +64,15 @@
 											</nav>
 										</center>
 										<br>
-										<h4>NIKE</h4>
+										<h2>NIKE</h2>
 										<ul>
 											{% for x in shoes_info %}
 												<li> <img src='{{x[4]}}' style="width: 7em; height: 7em; object-fit:fill;"/> {{x[0]}} {{x[1]}} {{x[2]}} {{x[3]}} </li>
 											{% endfor %}
 										</ul>
-										<h4>NEW BALANCE</h4>
+										<br>
+										<br>
+										<h2>NEW BALANCE</h2>
 										<ul>
 											{% for x in shoes_info2 %}
 												<li> <img src='{{x[3]}}' style="width: 7em; height: 7em; object-fit:fill;"/> {{x[0]}} {{x[1]}} {{x[2]}} </li>
