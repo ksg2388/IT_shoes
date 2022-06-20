@@ -107,7 +107,7 @@ def home():
 
 
 @app.route('/SingUp', methods=['GET', 'POST'])
-def register():
+def SingUp():
     es = Elasticsearch(es_host)
 
     if request.method == 'GET':
