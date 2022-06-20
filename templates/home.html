@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>모든 신발 이슈, IT SHOES!</title>
+		<meta charset="utf-8" />
+        <!-- 디바이스 크기 맞춤, 기본 꽉찬 화면으로 설정, 확대불가-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">	
+	</head>
+	<body>
+		<center>
+			<nav id="topMenu" >
+				<ul>
+					<li><a class="menuLink" href="">NIKE</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">NEW BALANCE</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">ADIDAS</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">STUSSY</a></li>
+					<li>|</li>
+					<li><a class="menuLink" href="">sdfs</a></li>
+					<li>|</li>
+				</ul>
+			</nav>
+		</center>
+		<!-- Wrapper -->
+			<div id="wrapper">
+					<header id="header">
+						<div class="inner">
+							<!--로고 이미지삽입?-->
+								<a href="home.html" class="logo">
+                                    <span class="title">
+                                        IT Shoes
+                                    </span>
+								</a>
+							<!-- NAV  로그인 화면코드 삽입-->
+								<nav id="rightMenu">
+									<ul>
+										<li>
+											<a href={{ url_for('login') }}>
+                                                <span>LOGIN / JOIN</span>
+                                            </a></li>
+									</ul>
+								</nav>
+						</div>
+
+					</header>
+
+				<!--메인-->
+					<div id="main">
+						<div class="inner">
+							<header>
+									<center>
+										<h1>세상의 모든 신발 이슈,&nbsp; 여기 다 &nbsp; It Shoes !</h1>
+										<h4>오늘의 발매 소식</h4>
+										<p>신규 등록 발매 정보</p>
+										<ul>
+											{% for x in shoes_info %}
+												<li> <img src='{{x[4]}}' style="width: 7em; height: 7em; object-fit:fill;/> {{x[0]}} {{x[1]}} {{x[2]}} {{x[3]}} </li>
+											{% endfor %}
+										</ul>
+									</center>
+							</header>
+						</div>
+					</div>
+
+				<!--하단-->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="copyright">
+								<li>2022. IT SHOES All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+
+
+	</body>
+</html>
+
+
