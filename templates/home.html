@@ -8,22 +8,6 @@
 		<link href="{{ url_for('static', filename='main.css') }}" rel="styleSheet">	
 	</head>
 	<body>
-		<center>
-			<nav id="topMenu" >
-				<ul>
-					<li><a class="menuLink" href="">NIKE</a></li>
-					<li>|</li>
-					<li><a class="menuLink" href="">NEW BALANCE</a></li>
-					<li>|</li>
-					<li><a class="menuLink" href="">ADIDAS</a></li>
-					<li>|</li>
-					<li><a class="menuLink" href="">STUSSY</a></li>
-					<li>|</li>
-					<li><a class="menuLink" href="">sdfs</a></li>
-					<li>|</li>
-				</ul>
-			</nav>
-		</center>
 		<!-- Wrapper -->
 			<div id="wrapper">
 					<header id="header">
@@ -53,8 +37,30 @@
 							<header>
 									<center>
 										<h1>세상의 모든 신발 이슈,&nbsp; 여기 다 &nbsp; It Shoes !</h1>
+										<div class="search">
+											<input type="text" placeholder="검색어 입력">
+											<!--<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">-->
+										</div>
+										<br><br>
 										<h4>오늘의 발매 소식</h4>
 										<p>신규 등록 발매 정보</p>
+										<center>
+											<nav id="topMenu" >
+												<ul>
+													<li><a class="menuLink" href="https://www.nike.com/kr/launch/?type=upcoming">NIKE</a></li>
+													<li>|</li>
+													<li><a class="menuLink" href="https://www.nbkorea.com/index.action">NEW BALANCE</a></li>
+													<li>|</li>
+													<li><a class="menuLink" href="https://www.adidas.co.kr/">ADIDAS</a></li>
+													<li>|</li>
+													<li><a class="menuLink" href="https://www.stussy.co.kr/">STUSSY</a></li>
+													<li>|</li>
+													<li><a class="menuLink" href="https://www.stussy.co.kr/">CONVERSE</a></li>
+													<li>|</li>
+												</ul>
+											</nav>
+										</center>
+										<br>
 										<h4>NIKE</h4>
 										<ul>
 											{% for x in shoes_info %}
