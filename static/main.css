@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+@import url("//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
 
 /* 타입 */
 	body, input, select, textarea {
 		color: #585858;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Dongle', sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.75;
 	}
 		
 	a {
+		color: #FCA205;
+    	/*font-family: 'Lobster';*/
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		-moz-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		-webkit-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
-		color: #585858;
 		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
 	}
 
@@ -24,6 +29,8 @@
 	}
 
 	h1 {
+		font-family: 'Nanum Brush Script', cursive;
+		color: #2e2e2e;
 		font-size: 2.75em;
 		font-weight: 700;
 		line-height: 1.3;
