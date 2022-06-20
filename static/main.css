@@ -139,13 +139,6 @@ img {
 				color: rgba(88, 88, 88, 0.5);
 			}
 /* 래퍼 */
-	#wrapper > * > .inner {
-		width: 100%;
-		max-width: 68em;
-		margin: 0 auto;
-		padding: 0 2.5em;
-	}
-
 	#topMenu {
 		height: 30px;
 		width: 850px;
